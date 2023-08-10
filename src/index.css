@@ -1,13 +1,226 @@
-body {
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 14px;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+Body {
+  font-family:  Tahoma, Geneva, Verdana, sans-serif;
+  background-color: rgb(255, 255, 255);
+  letter-spacing: -1px;
+  margin-bottom: 20px;
+}
+
+#title {
+  background-color: #6528F7;
+  width: 100%;
+  margin: 0px auto;
+  padding: 10px 0;
+  text-align: center;
+  font-size: 1.4rem;
+  color: rgb(255, 255, 255);
+  font-weight: 900;
+  position: fixed;
+}
+
+
+#mode-btn {
+  position: absolute;
+  font-size: 2rem;
+  background-color: #6528F7;
+  color: white;
+  border: none;
+  cursor: pointer;
+  right: 25px;
+  top: 3px;
+}
+
+/* ********** Balance CSS *********** */
+#container {
+  width: 400px;
+  margin: 0px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  
+}
+
+ .item {
+  width: 100%;
+  margin: 10px 0 0 0;
+ }
+
+ .balance-item {
+  text-align: center;
+ }
+
+.item h2{
+  color: #6528F7;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.left-aligned{
+  align-self: flex-start;
+}
+
+hr {
+  width: 100%;
+  margin: 3px 0;
+}
+
+#balance {
+  margin-top: 20px;
+  font-size: 3rem;
+  font-weight: bolder;
+}
+
+#balance-container {
+  margin: 15px 0px;
+  box-shadow: 2px 2px 2px 2px rgb(225, 225, 225);
+  display: flex;
+  justify-content: space-evenly;
+  background-color: #ffffff;
+  
+}
+
+.balance-detail-title, .balance-detail-amount {
+  padding: 0px auto;
+}
+
+.balance-detail-title{
+  padding-top: 20px;
+  font-size:  1rem;
+  font-weight: bolder;
+}
+
+.balance-detail-amount{
+  padding-bottom: 20px;
+  font-size:  1.2rem;
+  font-weight: 300;
+}
+
+#expense-balance {
+  color: red;
+}
+
+#income-balance {
+  color: rgb(0, 210, 21);
+}
+
+#vertical-line{
+  border-right: 1px solid rgb(218, 218, 218);
+  height: 45px;
+  margin: auto 0px;
+}  
+
+
+/* ******Add new CSS****** */
+form {
+  border-radius: 5px;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap; 
+  align-items: flex-start;
+  justify-content: center;
+}
+
+form div{
+  display: inline-block;
+}
+
+input[type=number],input[type=text], input[type=date], select {
+  width: fit-content;
+  padding: 8px 05px;
+  margin: 2px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  justify-content: flex-start;
+}
+
+input[type=text] {
+  margin-left: 25px;
+  width: 250px;
+}
+
+input[type=number]{
+  margin-left: 38px;
+}
+
+select {
+  margin-left: 35px; 
+}
+
+input[type=date] {
+  margin-left: 58px;
+}
+
+input[type=submit] {
+  width: fit-content;
+  background-color: #000000;
+  color: white;
+  padding: 8px 15px;
+  margin: 8px 0px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  justify-content: flex-end;
+}
+
+input[type=submit]:hover {
+  background-color: #D7BBF5;
+}
+
+
+/* ********** History CSS *********** */
+.entry {
+  display: flex;
+  justify-content: space-between;
+  height: 40px;
+  width: 100%;
+  color: rgb(31, 31, 31);
+  background-color: #f0edf5;
+  padding: 7px  8px;
+  margin: 5px 0;
+  letter-spacing: normal;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  align-items: center;
+}
+
+#expense {
+  border-left: 5px solid red;
+}
+
+#income {
+  border-left: 5px solid rgb(0, 210, 21);
+
+}
+
+#history-amount {
+  width: fit-content;
+  margin: 0px;
+  font-weight: 300;
+}
+
+#history-date {
+  margin-right: 4px;
+}
+
+#delete-button {
+  background-color: none;
+  border: none;
+  padding: 5px;
+  margin: 0;
+  color: rgb(173, 173, 173);
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+}
+
+#delete-button:hover {
+  background-color: red;
+  color: white
 }
